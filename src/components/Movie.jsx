@@ -6,7 +6,7 @@ function Movie(props) {
       <h2>{props.movieDetails.title}</h2>
 
       {props.movieDetails.imgURL ? (
-        <img src={props.movieDetails.imgURL} />
+        <img src={props.movieDetails.imgURL} style={{ width: "300px" }} />
       ) : (
         <img src="https://dummyimage.com/182x268/ffffff/000000" />
       )}
@@ -16,7 +16,7 @@ function Movie(props) {
 
       <button
         onClick={() => {
-          props.callbackToDelete(props.movieDetails.id);
+          props.callbackToDelete(props.movieDetails.title);
         }}
       >
         Delete

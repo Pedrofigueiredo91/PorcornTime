@@ -5,10 +5,10 @@ function Main(props) {
     <div className="Main">
       {/* {message} */}
 
-      {props.movies.map((movieObj) => {
+      {props.movies.map((movieObj, i) => {
         return (
           <Movie
-            key={movieObj.id}
+            key={i}
             movieDetails={movieObj}
             callbackToDelete={props.callbackToDelete}
           />
